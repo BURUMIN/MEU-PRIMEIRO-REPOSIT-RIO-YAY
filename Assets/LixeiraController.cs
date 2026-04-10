@@ -16,7 +16,9 @@ public class LixeiraController : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
         this.transform.position += new Vector3(horizontalInput * velocity, 0, 0);
+        this.transform.position += new Vector3(0 , verticalInput * velocity, 0);
         if (this.transform.position.x > 10)
         {
             this.transform.position = new Vector3(10, this.transform.position.y, this.transform.position.z);
@@ -25,6 +27,14 @@ public class LixeiraController : MonoBehaviour
         {
             this.transform.position = new Vector3(-10, this.transform.position.y, this.transform.position.z);
         }
-    }
+
+        if (this.transform.position.y > 7)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
+        }   else if (this.transform.position.y < 1)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
+        }
+     }
 }
 
