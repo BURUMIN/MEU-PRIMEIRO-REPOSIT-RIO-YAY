@@ -548,9 +548,9 @@ MonoBehaviour:
   maximoX: 10
   fixoY: 8
   fixoZ: 0
-  timer: 0.00001
+  timer: 3
   Lixo: {fileID: 1669345862}
-  maxPonto: 1
+  maxPonto: 10
   pontos: 0
   textoDoPonto: {fileID: 1938407977}
   textoDeVitoria: {fileID: 44197362}
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a87b458aaf8484e8cdf723f8ee5cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0.1
+  velocity: 0.01
 --- !u!114 &1372548741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,6 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c8ed13ccc06744d9a7cf0614dceda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LixoSpawnerController: {fileID: 920410212}
 --- !u!1001 &1678673105655345265
 PrefabInstance:
   m_ObjectHideFlags: 0

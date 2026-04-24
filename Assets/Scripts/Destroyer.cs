@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision) 
+    public LixoSpawnerController LixoSpawnerController;
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Lixo"))
         {
             Destroy(collision.gameObject);
+            LixoSpawnerController.AddToPoints(-1);
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
